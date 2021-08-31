@@ -6,3 +6,19 @@
 выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
  */
 
+function numberToObject(number) {
+    if (number > 999 || number < 0) {
+        return console.log('Необходимо ввести число в диапазоне от 0 до 999.')
+    }
+    else {
+        return {
+            units: Math.floor(number / 1),
+            teens: Math.floor(number / 10),
+            hundreds: Math.floor(number / 100)
+        }
+    }
+}
+
+console.log(numberToObject(-1));
+
+// Никак не могу избавиться от undefined в первой ветке. В чём моя ошибка?
